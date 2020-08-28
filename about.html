@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.min.css">
+	<script src="jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="style1.css">
+	<link rel="shortcut icon" href="../favicon.ico"> 
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="font-awesome.css">
+	
+	<script>
+$(document).ready(function(){
+     $("#btn-login").click(function(){
+         $("#loginmodal").modal();
+    });
+    
+});
+$(document).ready(function(){
+     $("#btn-signup").click(function(){
+         $("#signupmodal").modal();
+    });
+    
+});
+$(document).ready(function () 
+ { 
+  $("#watch-me").click(function()
+  {
+    $("#show-me:hidden").show('slow');
+   $("#show-me-two").hide();
+   $("#show-me-three").hide();
+   });
+   $("#watch-me").click(function()
+  {
+    if($('watch-me').prop('checked')===false)
+   {
+    $('#show-me').hide();
+   }
+  });
+  
+  
+  
+  
+  
+  
+  $("#see-me").click(function()
+  {
+    $("#show-me-two:hidden").show('slow');
+   $("#show-me").hide();
+   $("#show-me-three").hide();
+   });
+   $("#see-me").click(function()
+  {
+    if($('see-me-two').prop('checked')===false)
+   {
+    $('#show-me-two').hide();
+   }
+  });
+  
+  
+  
+  
+  
+  
+  
+  $("#look-me").click(function()
+  {
+    $("#show-me-three:hidden").show('slow');
+   $("#show-me").hide();
+   $("#show-me-two").hide();
+   });
+   $("#look-me").click(function()
+  {
+    if($('see-me-three').prop('checked')===false)
+   {
+    $('#show-me-three').hide();
+   }
+  });
+  
+ });
+
+
+</script>
+<script type="text/javascript">
+    var count1=0;
+    var price1=555000;
+    var count2=0;
+    var price2=555000;
+    var count3=0;
+    var price3=555000;
+    var count4=0;
+    var price4=510000;
+    var count5=0;
+    var price5=510000;
+    var total=0;
+    var totalcount=0;
+    var count6=0;
+    var price6=319000;
+    var count7=0;
+    var price7=369000;
+    var count8=0;
+    var price8=379000;
+   
+    function addClip(num){
+      totalcount++;
+      if(num==1)
+      {
+        document.getElementById("chart1").style.display="block";
+        count1++;
+        document.getElementById("q1").innerHTML=count1;
+        document.getElementById("t1").innerHTML=count1*price1;
+        total+=price1;
+      }
+      else if(num==2)
+      {
+        document.getElementById("chart2").style.display="block";
+        count2++;
+        document.getElementById("q2").innerHTML=count2;
+        document.getElementById("t2").innerHTML=count2*price2;
+        total+=price2;
+      }
+      else if(num==3)
+      {
+        document.getElementById("chart3").style.display="block";
+        count3++;
+        document.getElementById("q3").innerHTML=count3;
+        document.getElementById("t3").innerHTML=count3*price3;
+        total+=price3;
+        }
+      else if(num==4)
+      {
+        document.getElementById("chart4").style.display="block";
+        count4++;
+        document.getElementById("q4").innerHTML=count4;
+        document.getElementById("t4").innerHTML=count4*price4;
+        total+=price4;
+        }
+        else if(num==5)
+        {
+        document.getElementById("chart5").style.display="block";
+        count5++;
+        document.getElementById("q5").innerHTML=count5;
+        document.getElementById("t5").innerHTML=count5*price5;
+        total+=price5;
+        }
+        else if(num==6)
+        {
+        document.getElementById("chart6").style.display="block";
+        count6++;
+        document.getElementById("q6").innerHTML=count6;
+        document.getElementById("t6").innerHTML=count6*price6;
+        total+=price6;
+        }
+        else if(num==7)
+        {
+        document.getElementById("chart7").style.display="block";
+        count7++;
+        document.getElementById("q7").innerHTML=count7;
+        document.getElementById("t7").innerHTML=count7*price7;
+        total+=price7;
+        }
+        else if(num==8)
+        {
+        document.getElementById("chart8").style.display="block";
+        count8++;
+        document.getElementById("q8").innerHTML=count8;
+        document.getElementById("t8").innerHTML=count8*price8;
+        total+=price8;
+        }
+        
+      document.getElementById("add").innerHTML=totalcount;
+      document.getElementById("ans").innerHTML=total;
+
+    }
+    function showForm(){
+      document.getElementById("aa").setAttribute("id","bga");
+      document.getElementById("form_container1").setAttribute("id","display");
+    }
+    function showMain(){
+      document.getElementById("bga").setAttribute("id","aa");
+          
+      document.getElementById("display").setAttribute("id","form_container1");
+      document.getElementById("add").innerHTML=totalcount;
+      document.getElementById("payment").style.display="none";
+      
+    }
+    function showMain1(){
+      document.getElementById("bga").setAttribute("id","aa");
+          
+      document.getElementById("display").setAttribute("id","form_container1");
+      document.getElementById("payment").style.display="none";
+      count1=0;count2=0;count3=0;count4=0;count5=0;
+      totalcount=0;total=0;
+      document.getElementById("add").innerHTML=0;
+      for(var i=1;i<=5;i++)
+      {
+      document.getElementById("chart"+i).style.display="none";
+      }
+      document.getElementById("ans").innerHTML="";
+    }</script>
+  <style type="text/css">
+    #form_container1{
+      display:none;
+      padding:15px;
+    }
+    #display{
+      width:50%;
+      /*  you can change the table width  */
+      height:auto;
+      position: fixed;
+      left:30%;
+      top:5px;
+      z-index: 1;
+      border-radius: 10px;
+      box-shadow: 3px 3px 12px blue;
+      padding:15px;
+      background-color: white;
+    }
+    #aa{
+      width: 80%;
+  
+      margin-left: 10%;
+    }
+    #bga{
+      width: 80%;
+    
+      margin-left: 10%;
+      background:white;
+      opacity: 0.2;
+    }
+    #idd:hover{
+      cursor: pointer;
+    }
+    .dis{
+      width: 90%;
+      height: 30px;
+      margin-left: 5%;
+      padding:5px;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div id="form_container1">
+      <div id="chart1" class="dis">
+    <b>  Item 1:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 555,000 kyats&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Qty: <span id="q1"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Total: <span id="t1"></span> Kyats
+      </div>
+      <br> 
+      <div id="chart2" class="dis">
+      Item 2:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 550,000 kyats &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Qty: <span id="q2"></span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      Total: <span id="t2"></span> Kyats</div><br>
+      <div id="chart3" class="dis">
+      Item 3:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 550,000 kyats&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Qty: <span id="q3"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Total: <span id="t3"></span> Kyats</div><br>
+      <div id="chart4" class="dis">
+      Item 4:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 510,000 kyats&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Qty: <span id="q4"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Total: <span id="t4"></span> Kyats</div><br>
+      <div id="chart5" class="dis">
+      Item 5:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 510,000 kyats&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Qty: <span id="q5"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Total: <span id="t5"></span> Kyats</div><br>
+      <div id="chart6" class="dis">
+      Item 6:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 319,000 kyats&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Qty: <span id="q6"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Total: <span id="t6"></span> Kyats</div><br>
+      <div id="chart7" class="dis">
+      Item 7:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 369,000 kyats&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Qty: <span id="q7"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Total: <span id="t7"></span> Kyats</div><br>
+      <div id="chart8" class="dis">
+      Item 8:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Price: 379,000 kyats&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Qty: <span id="q8"></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      Total: <span id="t8"></span> Kyats</div><br>
+      <div style="padding-left: 48%;">
+      Total Charges:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+      <span id="ans"></span> Kyats</div><br>
+      Choose one of the payment type:</b>
+      <div style="padding:5px;">
+      <img src="images/banktran.png" width="40px" height="30px">
+      <img src="images/mastercard.png" width="30px" height="20px">
+      <img src="images/paypal2.png" width="40px" height="40px">
+      <img src="images/visa.png" width="30px" height="20px"></div>
+      <div id="payment" style="margin-left:10%;display: none; width: 80%; height: auto;">
+        <form>
+          Account Number:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text" name="" size="30"><br>
+          <input type="button" value="Payment" onclick="showMain1()" style="margin-left: 70%;">
+        </form>
+      </div>
+      <input type="button" value="Close" onclick="showMain()">
+    </div>
+</head>
+<body>
+	
+<div class="container">
+	<div class="header">
+
+	<div class="modal fade" id="loginmodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+      	<div class="modal-header" style="padding:10px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;
+          </button>
+
+        
+        </div>
+      
+          
+        
+        <div class="modal-body" style="padding:70px 80px;">
+        	
+        	
+        	<button type="submit" class="btn btn-primary btn-default" data-dismiss="modal"> Connect with facebook
+        	</button>
+        	 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	 <img src="images/giphy.gif" width="35px" height="34px"><br><b>Or</b><br>
+        	<button type="submit" class="btn btn-danger btn-default" data-dismiss="modal"> Connect with Google+
+        	</button>
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	<img src="images/googleplus.png" width="35px" height="34px"><br><b>Or</b><br>
+        	<button type="submit" class="btn btn-info btn-default" data-dismiss="modal"> Connect with Skype
+        	</button>
+        	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	<img src="images/skype.png" width="35px" height="34px"><br><b>Or</b><br>
+        	<button type="submit" class="btn btn-info btn-default" data-dismiss="modal"> Connect with Twitter
+        	</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="images/twitter.gif" width="35px" height="34px">
+        
+          
+          
+        </div>
+        <div class="modal-footer">
+        	<h3><b>Login</b></h3>
+        	<div class="row">
+        	<form role="form">
+            <div class="form-group">
+              <label for="usrname"><img src="images/images.png" width="20px" height="20px">
+              </span> Username/Email
+          </label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><img src="images/password.png" width="20px" height="20px">Password
+              </label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            
+              
+          </form>
+      </div>
+      <div class="row">
+      	<div class="col-md-7">
+        	<p>
+        		<b>Forgot password?</b> 
+        		<a href="#"><b> Request new password
+        		</b>
+        	</a>
+        		<br>
+        	 	<br>
+
+          <b>No account yet?</b><a href="#"><b>Sign up now
+          </b>
+          </a></p> 
+      </div>
+      <div class="col-md-5">
+          <div class="checkbox">
+
+              <label><input type="checkbox" value="" checked>Remember Password
+              </label>
+            </div>
+         <div class="b1">
+         	<button type="submit" class="btn btn-danger btn-default pull-right" data-dismiss="modal"> Cancel
+         </button>
+         </div>
+        <div class="b1">
+        	<button type="submit" class="btn btn-primary btn-default pull-right"> Login
+        </button>
+        </div>
+    </div>
+          
+         
+         </div> 
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+  <div class="modal fade" id="signupmodal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+      	<div class="modal-header" style="padding:10px 20px;">
+          <button type="button" class="close" data-dismiss="modal">&times;
+          </button>
+          <br>
+          <div class="row">
+          <form role="form">
+          	<div class="form-group">
+              <label for="firsname"><img src="images/images.png" width="20px" height="20px">
+              First Name
+          	  </label>
+              <input type="text" class="form-control" id="usrname" placeholder="First Name">
+            </div>
+            <div class="form-group">
+            <label for="lsrname"><img src="images/images.png" width="20px" height="20px">
+            Last Name
+          	</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+            <label for="usrname"><img src="images/images.png" width="20px" height="20px">
+            Username/Email
+          	</label>
+             <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+            <label for="psw"><img src="images/password.png" width="20px" height="20px">New Password
+              </label>
+            <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="form-group">
+            <label for="psw"><img src="images/password.png" width="20px" height="20px">Retype Password
+            </label>
+            <input type="text" class="form-control" id="psw" placeholder="Confirm password">
+            </div>
+            <div class="form-group">
+          <label class="control-label col-md-2"><img src="images/birthday.gif" width="20px" height="20px">Birthdate </label>
+
+          <div class="col-md-10">
+            <div class="form-inline">
+              <div class="form-group">
+                <select name="dd" class="form-control">
+                  <option value="">Day</option>
+                  <option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option><option value="4" >4 </option><option value="5" >5 </option><option value="6" >6 </option><option value="7" >7 </option><option value="8" >8 </option><option value="9" >9 </option><option value="10" >10 </option><option value="11" >11 </option><option value="12" >12 </option><option value="13" >13 </option><option value="14" >14 </option><option value="15" >15 </option><option value="16" >16 </option><option value="17" >17 </option><option value="18" >18 </option><option value="19" >19 </option><option value="20" >20 </option><option value="21" >21 </option><option value="22" >22 </option><option value="23" >23 </option><option value="24" >24 </option><option value="25" >25 </option><option value="26" >26 </option><option value="27" >27 </option><option value="28" >28 </option><option value="29" >29 </option><option value="30" >30 </option><option value="31" >31 </option>                </select>
+                  <select name="mm" class="form-control">
+                  <option value="">Month</option>
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>                </select>
+                  <select name="yyyy" class="form-control">
+                  <option value="0">Year</option>
+                  <option value="1955" >1955 </option><option value="1956" >1956 </option><option value="1957" >1957 </option><option value="1958" >1958 </option><option value="1959" >1959 </option><option value="1960" >1960 </option><option value="1961" >1961 </option><option value="1962" >1962 </option><option value="1963" >1963 </option><option value="1964" >1964 </option><option value="1965" >1965 </option><option value="1966" >1966 </option><option value="1967" >1967 </option><option value="1968" >1968 </option><option value="1969" >1969 </option><option value="1970" >1970 </option><option value="1971" >1971 </option><option value="1972" >1972 </option><option value="1973" >1973 </option><option value="1974" >1974 </option><option value="1975" >1975 </option><option value="1976" >1976 </option><option value="1977" >1977 </option><option value="1978" >1978 </option><option value="1979" >1979 </option><option value="1980" >1980 </option><option value="1981" >1981 </option><option value="1982" >1982 </option><option value="1983" >1983 </option><option value="1984" >1984 </option><option value="1985" >1985 </option><option value="1986" >1986 </option><option value="1987" >1987 </option><option value="1988" >1988 </option><option value="1989" >1989 </option><option value="1990" >1990 </option><option value="1991" >1991 </option><option value="1992" >1992 </option><option value="1993" >1993 </option><option value="1994" >1994 </option><option value="1995" >1995 </option><option value="1996" >1996 </option><option value="1997" >1997 </option><option value="1998" >1998 </option><option value="1999" >1999 </option><option value="2000" >2000 </option><option value="2001" >2001 </option><option value="2002" >2002 </option><option value="2003" >2003 </option><option value="2004" >2004 </option><option value="2005" >2005 </option><option value="2006" >2006 </option>                </select>
+              </div>
+              
+            
+            </div>
+          </div>
+        </div>
+        <hr>
+         <div class="form-group">
+           
+            </div>
+        <div class="form-group">
+        	
+        		
+         
+            
+        
+            <div class="col-md-5">
+            <div class="form-inline">
+            	<div class="form-group">
+           <select name="cc" class="form-control">
+                  <option value="">Country</option>
+                  <option value="1">United Kingdom</option><option value="2">Myanmar</option><option value="3">China</option><option value="4">South Korea</option><option value="5">Japan</option><option value="6">India</option><option value="7">Thailand</option><option value="8">Singapore</option><option value="9">Australia</option><option value="10">Russia</option><option value="11">Ireland</option><option value="12">Sweden</option>
+                	<option value="13">United States of America</option>                </select>
+              </div>
+            </div>
+            </div>
+        </div>
+            
+              <div class="form-group">
+             <b>Zip / Postal Code:</b>
+             
+            <input type="text" class="form-control" id="zip" placeholder="Enter Zip or Postal Code">
+            </div>
+            <div class="form-group">
+			<label class="col-md-2 control-label"><img src="images/phone.png" width="20px" height="20px">PhNo.</label>
+			<div class="col-md-10">
+			
+				<div class="phone-list">
+				
+					<div class="input-group phone-input">
+						<span class="input-group-btn">
+							<button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="type-text">Type</span> <span class="caret"></span></button>
+							<ul class="dropdown-menu" role="menu">
+								<li><a class="changeType" href="javascript:;" data-type-value="phone">+1</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="fax">+95</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+86</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+91</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+46</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+7</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+81</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+353</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+82</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+65</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+44</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+66</a></li>
+								<li><a class="changeType" href="javascript:;" data-type-value="mobile">+61</a></li>
+
+							</ul>
+						</span>
+						<input type="hidden" name="phone[1][type]" class="type-input" value="" />
+						<input type="text" name="phone[1][number]" class="form-control" placeholder="" />
+					</div>
+				</div>
+			</div>
+          </form>
+        </div>
+    </div>
+      <div class="modal-body" style="padding:30px 30px;">
+      	<h4><b>Choose your payment method</b><img src="images/finger.jpg" width="40px" height="40px"></h4>
+        	
+        <div class="row">
+ <div class="col-sm-12" align="center">
+
+        <form id='form-id'>
+            <input id='watch-me' name='test' type='radio' checked /> <b>Credit/Debit Card</b><img src="images/visa.png" width="30px" height="20px">
+            <img src="images/mastercard.png" width="30px" height="20px">
+            <input id='see-me' name='test' type='radio' /> <b>PayPal</b><img src="images/paypal2.png" width="40px" height="40px">
+            <input id='look-me' name='test' type='radio' /><b>Bank transfer</b><img src="images/banktran.png" width="40px" height="30px">
+        </form>
+        <br><br>
+        <div id='show-me'>
+            
+            <div class="form-group">
+            <label for="cardno">
+            Card No.
+          	</label>
+             <input type="text" class="form-control" id="usrname" placeholder="Enter card no.">
+            </div>
+            <div class="form-group">
+            <label for="cardna">
+            Name on card
+          	</label>
+             <input type="text" class="form-control" id="usrname" placeholder="Enter...">
+            </div>
+            <div class="form-group">
+            <label for="secco">
+            Security Code (CVV)
+          	</label>
+             
+             <input type="text" class="form-control" id="usrname" placeholder="...">
+            </div>
+            <div class="form-group">
+          <label class="control-label col-md-2"> Expiration Date: </label>
+
+          <div class="col-md-10">
+            <div class="form-inline">
+              <div class="form-group">
+                <select name="dd" class="form-control">
+                  <option value="">Day</option>
+                  <option value="1" >1 </option><option value="2" >2 </option><option value="3" >3 </option><option value="4" >4 </option><option value="5" >5 </option><option value="6" >6 </option><option value="7" >7 </option><option value="8" >8 </option><option value="9" >9 </option><option value="10" >10 </option><option value="11" >11 </option><option value="12" >12 </option><option value="13" >13 </option><option value="14" >14 </option><option value="15" >15 </option><option value="16" >16 </option><option value="17" >17 </option><option value="18" >18 </option><option value="19" >19 </option><option value="20" >20 </option><option value="21" >21 </option><option value="22" >22 </option><option value="23" >23 </option><option value="24" >24 </option><option value="25" >25 </option><option value="26" >26 </option><option value="27" >27 </option><option value="28" >28 </option><option value="29" >29 </option><option value="30" >30 </option><option value="31" >31 </option>                </select>
+                  <select name="mm" class="form-control">
+                  <option value="">Month</option>
+                  <option value="1">Jan</option><option value="2">Feb</option><option value="3">Mar</option><option value="4">Apr</option><option value="5">May</option><option value="6">Jun</option><option value="7">Jul</option><option value="8">Aug</option><option value="9">Sep</option><option value="10">Oct</option><option value="11">Nov</option><option value="12">Dec</option>                </select>
+                  <select name="yyyy" class="form-control">
+                  <option value="0">Year</option>
+                  <option value="1955" >1955 </option><option value="1956" >1956 </option><option value="1957" >1957 </option><option value="1958" >1958 </option><option value="1959" >1959 </option><option value="1960" >1960 </option><option value="1961" >1961 </option><option value="1962" >1962 </option><option value="1963" >1963 </option><option value="1964" >1964 </option><option value="1965" >1965 </option><option value="1966" >1966 </option><option value="1967" >1967 </option><option value="1968" >1968 </option><option value="1969" >1969 </option><option value="1970" >1970 </option><option value="1971" >1971 </option><option value="1972" >1972 </option><option value="1973" >1973 </option><option value="1974" >1974 </option><option value="1975" >1975 </option><option value="1976" >1976 </option><option value="1977" >1977 </option><option value="1978" >1978 </option><option value="1979" >1979 </option><option value="1980" >1980 </option><option value="1981" >1981 </option><option value="1982" >1982 </option><option value="1983" >1983 </option><option value="1984" >1984 </option><option value="1985" >1985 </option><option value="1986" >1986 </option><option value="1987" >1987 </option><option value="1988" >1988 </option><option value="1989" >1989 </option><option value="1990" >1990 </option><option value="1991" >1991 </option><option value="1992" >1992 </option><option value="1993" >1993 </option><option value="1994" >1994 </option><option value="1995" >1995 </option><option value="1996" >1996 </option><option value="1997" >1997 </option><option value="1998" >1998 </option><option value="1999" >1999 </option><option value="2000" >2000 </option><option value="2001" >2001 </option><option value="2002" >2002 </option><option value="2003" >2003 </option><option value="2004" >2004 </option><option value="2005" >2005 </option><option value="2006" >2006 </option>                </select>
+              </div>
+              
+            
+            </div>
+          </div>
+        </div>
+            
+        </div>
+        
+        
+ </div>
+</div>
+          
+          
+        </div>
+        <div class="modal-footer">
+        	
+        	<button type="submit" class="btn btn-success btn-default" data-dismiss="modal"> Sign Up
+         </button>
+        	<button type="submit" class="btn btn-danger btn-default" data-dismiss="modal"> Cancel
+         </button>
+     
+      </div>
+       
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+		<div class="row1">
+				<div class="d1">
+					<a href="#" class="" id="btn-login">
+					<img src="images/images1.png" width="15px" height="15px"><b>Log In</b>
+				</a>
+			</div>
+				<div class="d2">
+					<input type="text" name="search" placeholder="search...">
+				<input type="image" src="images/lg.searching-for-loading-icon.gif" alt="Search">
+			</div>
+				
+		</div>
+
+		<div class="row2">
+		
+		<div class="d1">
+			<a href="#" id="btn-signup" class=""><img src="images/images.png" width="15px" height="15px"><b>Create Account</b>
+			</a>
+		</div>
+		
+			
+			<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+     <a href=""> <img src="images/technolandlogo.jpg" width="150px" height="100px"></a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="n1"><a href="index.html"><b>Technoland</b></a></li>
+     <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><b>Item</b> <span class="caret"></span></a>
+         <ul class="dropdown-menu">
+          <li><a href="desktop.html"><b>Desktop</b></a></li>
+          <li><a href="laptop.html"><b>Laptop</b></a></li>
+          <li><a href="tablet.html"><b>Tablet</b></a></li>
+           <li><a href="mobile.html"><b>Mobile device</b></a></li>
+           <li><a href="computer.html"><b>Computer component</b></a></li>
+           <li><a href="accessories.html"><b>Mobile device accessories</b></a></li>
+        </ul> 
+        <li class="n1"><a href="service.html"><b>Service</b></a></li>
+      <li class="n1"><a href="news&events.html"><b>News & Events</b></a></li><li class="n1">
+        <a href="about.html"><b>About</b></a></li>
+      <li class="n1"><a href="contact.html"><b>Contact</b></a></li>
+      </li>
+      <li class="n1"><div id="aa"><button onclick="showForm()">
+  <span id="add" style="color:red;font-size: 22px;">0</span>
+  &nbsp;&nbsp;&nbsp;
+  <i class="material-icons" id="idd" style="color:red;">local_grocery_store</i></button></div></li>
+        
+      
+        
+     
+    </ul>
+  </div>
+</nav>
+		</div>	
+		</div>
+		</div>
+		<hr>
+	
+	<div class="body">
+    <dir class="row">
+      <div class="col-md-12">
+      <h1><b>About Us</b></h1>
+      <br>
+      <b>U Myat Soe Win is an entrepreneur, one of Myanmar’s best-known electronic and IT retailers, a family man, Founder and Managing Director of Technoland Computer Trading Company Limited.
+U Myat Soe Win started Technoland with one store in Yangon, Myanmar in March 2000. During the next 17 years U Myat Soe Win expanded the business to a total of 12 stores including showrooms and service centers across Myanmar.
+Given the recent fast-moving reforms in Myanmar we believe that this will be the springboard for massive growth of the Technoland brand which is the most trusted and recognizable electronic retail and IT dealer in the Myanmar market.</b>
+    </div>
+    </dir>
+    <hr>
+    <div class="col-md-12"><h2><b>Aims & Objectives</b></h2>
+      <br>
+     <b>•  Offers the widest range of products and services from Smartphones, Tablets, Laptops, Desktops, Projectors, Printers, Scanners, Network appliances, Computer peripherals, other related Gadgets and Accessories. Technoland also provides survey equipment, photo frames and a one-stop photo service.<br>
+• Access to well-known brands such as Hewlett-Packard (HP), Dell, Apple, Cisco, Ruckus, UBiQUiTi, HIK Vision, Jabra, B&O Play, JVC, Sony, Panasonic, Canon, Epson, Fuji Xerox, Brother, Acer, Samsung, LG, Lenovo, HTC, AOC, ASUS, Kaspersky, ViewSonic, and more.<br>
+• There are 12 Technoland Stores for customers in 5 cities.<br>
+• According to the ICT Survey 2009 and 2010, Technoland was awarded “Best Service Award” by Myanmar Computer Industrial Association (MCIA) in 2009 and 2010. Technoland became Gold Intel Technology Provider (ITP) in 2014 and Platinum ITP in 2016.<br>
+• Successful business to business distributor relationships with well-known local companies such as KMD, DCD, TMW, ShweLamin Naga, Synnex Myanmar, Royal Irrawaddy, Alliance Star, Royal Smart, Concordia, Client Focus, Myanmar Golden Rock, Gandamar Office Machine Ltd, Mastech, MMG Network Solution, Frontiir companies and other retail outlets.<br>
+• Technoland employs more than 310 Sales, Technicians and Office Staff.<br>
+• Technoland signed an agreement with a large Japanese multi-national to provide finance under a small loan scheme and partnership with Myanmar’s largest supermarket chain for establishment of outlets within their supermarkets.</b>
+<hr></div>
+<div class="col-md-6">
+ 
+  <h2><b>Company Structure</b></h2><br>
+  <ol>
+    <b><li> Administration Department</li>
+    <li>Human Resource Department</li>
+    <li>Finance Department</li>
+    <li>IT Sales and Marketing Department split into:
+      <ul>
+        <li>Mobile section</li>
+        <li>Computer section</li>
+        <li>Printer & Network section</li>
+        <li>Accessories section</li>
+        <li>B2B/B2C section</li>
+      </ul></li>
+    <li>IT Service Center
+      <ul>
+        <li>Networking & Outdoor Service section</li>
+        <li>One stop in-store servicing section (Computer, Mobile & Printer)</li>
+      </ul></li>
+    <li>Business Development Department</li></b>
+  </ol>
+  
+</div>
+<div class="col-md-6">
+  <h2><b>FAQ</b></h2><br>
+  <b>Q. What other products (or product features) would you like us to offer? ?<br>
+
+A. Server, Projector, other networking devices .<br>
+<hr>
+Q. How did you first hear about us?<br>
+
+A. Social Media.<br>
+<hr>
+Q. What is your preferred payment/delivery method?<br>
+
+A. Bank transfer .<br>
+<hr>
+Q. Which of our competitors did you consider before choosing us?<br>
+
+A. Unique and Access Spectrum.<br>
+
+
+<hr>
+Q. Is our pricing clear to you? <br>
+
+A. Yes
+</div>
+
+    </div>
+	<div class="col-md-12"><hr></div>
+	<div class="footer">
+		<div class="f1"><a href=""><img src="images/twitter.gif" width="30px" height="30px"></a>
+	</div>
+	<div class="f1">
+			<a href=""><img src="images/skype.png" width="30px" height="30px"></a>
+		</div>
+		<div class="f1">
+			<a href=""><img src="images/googleplus.png" width="30px" height="30px"></a>
+		</div>
+		<div class="f1">
+			<a href=""><img src="images/giphy.gif" width="30px" height="30px"></a>
+		</div>
+		
+		
+		
+
+	<br>
+	
+	<div class="col-md-6">
+		
+	<h3><b>Address</b></h3>
+	<p><b>(1) Technoland  36 Street
+No.162_170, 36th Street (middle block), Kyauktada Township, Yangon.
+Tel: 09-73024327, 09-73024328, 09-73041734, 09-73041735,
+09-254839225~30. (Daily 9:30 AM ~ 6:30 PM)
+<hr>
+<br>
+(2) Technoland  U Chit Mg Road
+No. 51, U Chit Maung Road, Bahan Township, Yangon.
+Tel: 09-73145164, 09-254839209, 09-254839210. (Daily 9:30 AM ~ 6:30 PM)
+<hr>
+<br>
+(3) Technoland  Thamine
+No. 55 F,Yangon-Insein Road, Hlaing Township, Yangon.
+Tel: 01- 519796, 09-254839204, 09-254839205. (Daily 9:30 AM ~ 6:30 PM)</b>
+</p>
+	</div>
+	<div class="col-md-6">
+	<div class="fl">
+    &nbsp;
+    <a href="contact.html"><b>Contact</b></a>
+  </div>
+  <div class="fl">
+    &nbsp;
+    <a href="about.html"><b>About</b></a>
+  </div>
+  <div class="fl">
+    &nbsp;
+  <a href="news&events.html"><b>News & Events</b></a>
+  </div>
+  <div class="fl">
+    &nbsp;
+    <a href="service.html"><b>Service</b></a>
+  </div>
+  <div class="fl">
+    &nbsp;
+    <a href="index.html"><b>Home</b></a>
+
+  </div>
+
+	</div>
+	</div>
+
+</div>
+</body>
+</html>
